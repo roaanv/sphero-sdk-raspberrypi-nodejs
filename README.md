@@ -27,3 +27,8 @@ Our SDK is meant for beginners and experts alike. If you are just getting starte
 The best way to get familiar with either version of our SDK is to dive into the `public` samples, and follow along with code.  Feel free to modify the programs and experiment to gain a better understanding of what different values, and inputs affect the operation of RVR.  If you find yourself needing assistance, we are always happy to provide help through our community portal where other Sphero enthusiasts, as well as our developers can share knowledge, and help you succeed with your ideas.
 
 Happy coding!
+
+# Updated
+
+## Misc
+* Swagger docs available at http://<ip>:2010/api-docs

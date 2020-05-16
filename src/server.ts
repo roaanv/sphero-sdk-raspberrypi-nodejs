@@ -31,6 +31,5 @@ server.listen(configuration.defaultConfiguration.port, function () {
     logger.info('Server is listening on: '
         + configuration.defaultConfiguration.address
         + ':'
-        + configuration.defaultConfiguration.port
-        + '(' + server.address().family + ')');
+        + configuration.defaultConfiguration.port);
 });

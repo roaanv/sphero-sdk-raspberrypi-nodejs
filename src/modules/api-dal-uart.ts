@@ -1,5 +1,5 @@
 // external imports
-import * as SerialPort from 'serialport';   // https://github.com/node-serialport/node-serialport
+import SerialPort from 'serialport';   // https://github.com/node-serialport/node-serialport
 
 // internal imports
 import {IApiCommandMessage} from '../models/api-command-message';

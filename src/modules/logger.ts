@@ -1,5 +1,5 @@
 // external imports
-import * as winston from 'winston';
+import winston from 'winston';
 
 // internal imports
 import {IGenericKeyValuePair} from '../models/key-value-pair';
@@ -18,11 +18,11 @@ export interface ILogger {
     exception(error: Error, message: string): void;
 }
 
-
-let logger = new (winston.Logger)({
-    transports: [
-        new (winston.transports.Console)()
-    ]
+let logger = winston.createLogger({
+  transports: [
+    new winston.transports.Console()
+  ],
+  format: winston.format.cli()
 });
 
 // when debugging, it's helpful to add this line in the transports

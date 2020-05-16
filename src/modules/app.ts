@@ -1,7 +1,7 @@
 // external imports
-import * as express from 'express';
-import * as compression from 'compression';
-import * as cors from 'cors';
+import express from 'express';
+import compression from 'compression';
+import cors from 'cors';
 import * as bodyParser from 'body-parser';
 import {Server as HttpServer} from 'http';
 import * as WebSocket from 'ws';
@@ -81,7 +81,9 @@ export class App {
 
         // more options --> https://github.com/scottie1984/swagger-ui-express
         let swaggerDocument: object = buildSwaggerDoc();
-        this.expressApp.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+        const swaggerDocsRoute = `/api-docs`;
+        this.expressApp.use(swaggerDocsRoute, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+        logger.debug(`Route '${swaggerDocsRoute}' for swaggered docs registered successfully!`);
 
         // explore using this
         // https://github.com/expressjs/errorhandler
