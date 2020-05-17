@@ -20,7 +20,7 @@ const StyledSubGrid = styled(Grid)({
 	margin: '30px 30px'
 });
 
-// We pass rvrToy into each of our components via props, as the commands to retrieve battery information are all called directly on the SpheroRvrToy object (which we created an instance of in App.js, called rvrToy, to use across this application). 
+// We pass rvrToy into each of our components via props, as the commands to retrieve battery information are all called directly on the SpheroRvrToy object (which we created an instance of in App.jsx, called rvrToy, to use across this application).
 
 const VersionDetails = props => {
 	return (

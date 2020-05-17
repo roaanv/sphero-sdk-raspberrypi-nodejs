@@ -135,7 +135,7 @@ class RVRJoystick extends React.Component {
 
 	setPRNDL = () => {
 		this.setState({
-			backward: this.state.backward == false ? true : false
+			backward: !this.state.backward
 		});
 	};
 

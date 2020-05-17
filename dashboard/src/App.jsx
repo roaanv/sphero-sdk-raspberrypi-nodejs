@@ -5,8 +5,9 @@ import { styled } from '@material-ui/styles';
 import PageBody from './components/PageBody';
 import TopBar from './components/TopBar';
 
-// Because we'll be communicating with the RVR throughout the application, we initiate our specific instance of it (with our IP address and port) here, at the top level, in the App.js file
-let rvrToy = new SpheroRvrToy('10.211.2.18', '2010');
+// Because we'll be communicating with the RVR throughout the application, we initiate our specific instance of it (with our IP address and port) here, at the top level, in the App.jsx file
+// let rvrToy = new SpheroRvrToy('10.211.2.18', 2010);
+let rvrToy = new SpheroRvrToy('rvr-zero', 2010);
 
 // This is a styled component; we are using the ones specific to Material UI, as opposed to the original, vanilla version
 const TheBigRoot = styled('div')({
@@ -18,9 +19,9 @@ const App = () => {
 	return (
 		<TheBigRoot>
 			{/* TopBar is the header bar across the top of the page (where you could expand by adding a search function or the like) */}
-			<TopBar></TopBar>
+			<TopBar/>
 			{/* PageBody is where all of the action happens. We import our instance of rvrToy so that we can utilize it in the different areas of the dashboard */}
-			<PageBody rvrToy={rvrToy}></PageBody>
+			<PageBody rvrToy={rvrToy}/>
 		</TheBigRoot>
 	);
 };
