@@ -7,7 +7,8 @@
   "scripts": {
     "validate": "tsc --noEmit",
     "build": "tsc",
-    "start": "ts-node src/server.ts"
+    "start-ts": "ts-node src/server.ts",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@material-ui/icons": "^4.9.1",
